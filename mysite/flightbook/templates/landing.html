@@ -1,0 +1,68 @@
+   
+   <!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+{% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/flight.css' %}" type = "text/css"/>
+    <title>PV Airlines</title>
+  </head>
+  <body>
+  <table class="table" style="position: absolute;top:200px;">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Flight Code</th>
+        <th>Flight Type</th>
+        <th>Dept.Time</th>
+        <th>Arrival Time</th>
+        <th>Duration</th>
+        <th>Price</th>
+        <th>Book Now!</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="{% static 'images/business.jpg' %}" height="70px" width="100px"></td>
+        <td>{{business.code}}</td>
+        <td>{{business.flight_name}}</td>
+        <td>{{business.dept_time}}</td>
+        <td>{{business.arrival_time}}</td>
+        <td>{{business.duration}}</td>
+        <td>{{business.price}}</td>
+        <td>
+          <form>
+           <button type="submit" class="btn btn-success">BOOK</button>
+         </form>
+        </td>
+      </tr>
+      <tr>
+        <td><img src="{% static 'images/economy.jpg' %}" height="70px" width="100px"></td>
+        <td>{{economy.code}}</td>
+        <td>{{economy.flight_name}}</td>
+        <td>{{economy.dept_time}}</td>
+        <td>{{economy.arrival_time}}</td>
+        <td>{{economy.duration}}</td>
+        <td>{{economy.price}}</td>
+        <td>
+            <form>
+           <button type="submit" class="btn btn-success">BOOK</button>
+           <form>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+ 
+</html> 
