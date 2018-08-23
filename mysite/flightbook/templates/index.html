@@ -4,33 +4,46 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css" >
+{% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/flight.css' %}" type = "text/css"/>
     <title>PV Airlines</title>
   </head>
   <body>
     <div id="intro">
     <h1>Welcome to PV Airlines!</h1>
+    <br>
+    <h5>We currently serve flights from Bangalore/Chennai/Hyderabad 
+        to Delhi/Mumbai/Rajasthan only.</h5>
   </div>
 
 <div id="booking">
-<form>
+<form method="GET">
+    <div class="row">
+        <label for='name' style="padding: 12px">Flyer Name</label><br>
+        <div class="col-sm-8">
+      <input type="text" class="form-control" name="person_name" required>
+    </div>
+    </div>
   <div class="row">
     <div class="col">
         <label for='dept'>Departure</label>
-     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
-        <option selected>BANGALORE</option>
-        <option value="2">MUMBAI</option>
+     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="start" required >
+
+        {% for f in flights %}
+        <option value={{f.id}}>{{f.source}}</option>
+        {% endfor %}
+        
       </select>
     </div>
     <div class="col">
         <label for='arrival'>Arrival</label>
-     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
-        <option selected>CHENNAI</option>
-        <option value="2">DELHI</option>
+     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="end"required >
+        {% for f in flights %}
+        <option value={{f.id}}>{{f.dest}}</option>
+        {% endfor %}
       </select>
     </div>
   </div>
@@ -44,7 +57,7 @@
     <div class="form-row align-items-center">
     <div class="col-auto my-1">
       <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="" required>
         <option selected>1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -54,7 +67,7 @@
      
 <br>
 
-        <button type="submit" class="btn btn-success">BOOK NOW</button>
+        <button type="submit" class="btn btn-success">SEARCH</button>
    
   
 
@@ -62,16 +75,6 @@
 
 
 </div>
-
-
-
-
-
-
-
-
-
-
 
 
 

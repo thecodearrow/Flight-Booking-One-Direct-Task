@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Flights
 
 def index(request):
-    return HttpResponse("<h2>PV Airlines here!</h2>")
+    flights=Flights.objects.all() #passing Flights QuerySet
+    return render(request, 'index.html',{'flights':flights})
