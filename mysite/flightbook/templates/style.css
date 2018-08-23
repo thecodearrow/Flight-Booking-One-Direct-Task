@@ -1,0 +1,25 @@
+#booking
+{
+position: absolute;
+top:200px;
+left:500px;
+background: #20057a;
+color:white;
+height:400px;
+width:500px;
+padding:20px;
+}
+
+#intro{
+
+position: absolute;
+top:50px;
+left:500px;
+
+}
+
+body{
+
+  background-color:#ff9008;
+  color:#20057a;
+}
