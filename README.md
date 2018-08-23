@@ -6,6 +6,6 @@ Sincere apologies for delay.
 
 Screenshots (More will be added soon):
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/thecodearrow/Flight-Booking-One-Direct-Task/blob/master/screenshots/1.png)
 
 
