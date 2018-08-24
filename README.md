@@ -18,9 +18,15 @@ Screenshots (More will be added soon):
 
 ![alt text](https://github.com/thecodearrow/Flight-Booking-One-Direct-Task/blob/master/screenshots/5.png)
 
+![alt text](https://github.com/thecodearrow/Flight-Booking-One-Direct-Task/blob/master/screenshots/6.png)
+
 ![alt text](https://github.com/thecodearrow/Flight-Booking-One-Direct-Task/blob/master/screenshots/2.png)
 
 ![alt text](https://github.com/thecodearrow/Flight-Booking-One-Direct-Task/blob/master/screenshots/3.png)
 
 ![alt text](https://github.com/thecodearrow/Flight-Booking-One-Direct-Task/blob/master/screenshots/4.png)
+
+![alt text](https://github.com/thecodearrow/Flight-Booking-One-Direct-Task/blob/master/screenshots/7.png)
+
+![alt text](https://github.com/thecodearrow/Flight-Booking-One-Direct-Task/blob/master/screenshots/8.png)
 
