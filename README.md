@@ -24,6 +24,3 @@ Screenshots (More will be added soon):
 
 ![alt text](https://github.com/thecodearrow/Flight-Booking-One-Direct-Task/blob/master/screenshots/4.png)
 
-
-
-
