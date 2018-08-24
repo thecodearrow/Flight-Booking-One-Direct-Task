@@ -12,53 +12,60 @@
     <title>PV Airlines</title>
   </head>
   <body>
-  <table class="table" style="position: absolute;top:200px;">
+    <h3 style="position:absolute;left:300px;top:30px;">BOOKING CONFIRMED :)</h3>
+    <div class="ticket">
+    <table class="table" style="position: absolute;top:100px;left:300px;height:500px;width: 600px">
     <thead>
       <tr>
-        <th>Image</th>
+  
+        <th>Passenger Name</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Date</th>
+        <th>No. of tickets</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{passenger.p_name}}</td>
+        <td>{{passenger.source}}</td>
+        <td>{{passenger.dest}}</td>
+        <td>{{passenger.date}}</td>
+        <td>{{passenger.seats}}</td>
+       
+      </tr>
+      
+    </tbody>
+  </table>
+  <table class="table" style="position: absolute;top:300px;left:300px;height:500px;width: 500px">
+    <thead>
+      <tr>
+  
         <th>Flight Code</th>
         <th>Flight Type</th>
         <th>Dept.Time</th>
         <th>Arrival Time</th>
         <th>Duration</th>
         <th>Price</th>
-        <th>Book Now!</th>
+        <th>STATUS</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><img src="{% static 'images/business.jpg' %}" height="70px" width="100px"></td>
-        <td>{{business.code}}</td>
-        <td>{{business.flight_name}}</td>
-        <td>{{business.dept_time}}</td>
-        <td>{{business.arrival_time}}</td>
-        <td>{{business.duration}}</td>
-        <td>{{business.price}}</td>
+        <td>{{passenger.code}}</td>
+        <td>{{passenger.flight_name}}</td>
+        <td>{{passenger.dept_time}}</td>
+        <td>{{passenger.arrival_time}}</td>
+        <td>{{passenger.duration}}</td>
+        <td>{{passenger.price}}</td>
         <td>
-          <form action="success" method="GET">
-            <input type="text" name="business" hidden>
-           <button  type="submit" class="btn btn-success">BOOK</button>
-         </form>
+          <img src="{% static 'images/booked.png' %}" height="30px" width="30px">
         </td>
       </tr>
-      <tr>
-        <td><img src="{% static 'images/economy.jpg' %}" height="70px" width="100px"></td>
-        <td>{{economy.code}}</td>
-        <td>{{economy.flight_name}}</td>
-        <td>{{economy.dept_time}}</td>
-        <td>{{economy.arrival_time}}</td>
-        <td>{{economy.duration}}</td>
-        <td>{{economy.price}}</td>
-        <td>
-            <form action="success" "method="GET">
-              <input type="text" name="economy" hidden>
-           <button  type="submit" class="btn btn-success">BOOK</button>
-           <form>
-        </td>
-      </tr>
+      
     </tbody>
   </table>
-
+</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

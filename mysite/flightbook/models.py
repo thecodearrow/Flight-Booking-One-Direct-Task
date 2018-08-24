@@ -12,7 +12,6 @@ class Flights(models.Model):
 
 class FlightTypes(models.Model):
 
-	#change it to appropriate field types !
 
     code = models.CharField(max_length = 6)
     flight_name = models.CharField(max_length = 20)
@@ -23,3 +22,21 @@ class FlightTypes(models.Model):
 
     def __str__(self):
         return self.flight_name
+
+class Passenger(models.Model):
+    p_name=models.CharField(max_length = 20)
+    source = models.CharField(max_length = 20)
+    dest = models.CharField(max_length = 20)
+    seats= models.CharField(max_length = 1)
+    date=models.CharField(max_length = 10)
+    code = models.CharField(max_length = 6)
+    flight_name = models.CharField(max_length = 20)
+    dept_time=models.CharField(max_length = 10)
+    arrival_time=models.CharField(max_length = 10)
+    price=models.CharField(max_length = 10)
+    duration=models.CharField(max_length = 10)
+    def __str__(self):
+        return self.p_name
+
+    class Meta:
+        get_latest_by = 'id'

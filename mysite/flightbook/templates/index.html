@@ -20,7 +20,7 @@
   </div>
 
 <div id="booking">
-<form method="GET">
+<form action="landing" method="get">
     <div class="row">
         <label for='name' style="padding: 12px">Flyer Name</label><br>
         <div class="col-sm-8">
@@ -33,7 +33,7 @@
      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="start" required >
 
         {% for f in flights %}
-        <option value={{f.id}}>{{f.source}}</option>
+        <option value={{f.source}}>{{f.source}}</option>
         {% endfor %}
         
       </select>
@@ -42,7 +42,7 @@
         <label for='arrival'>Arrival</label>
      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="end"required >
         {% for f in flights %}
-        <option value={{f.id}}>{{f.dest}}</option>
+        <option value={{f.dest}}>{{f.dest}}</option>
         {% endfor %}
       </select>
     </div>
@@ -57,8 +57,8 @@
     <div class="form-row align-items-center">
     <div class="col-auto my-1">
       <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="" required>
-        <option selected>1</option>
+      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="seats" required>
+        <option value="1" selected >1</option>
         <option value="2">2</option>
         <option value="3">3</option>
       </select>
