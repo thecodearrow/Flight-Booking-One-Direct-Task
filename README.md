@@ -3,13 +3,6 @@
 Tools used:
 HTML,CSS,Python,Django,SQLite3
 
-Check it out here for demo purpose--
-
-http://pvairlines.pythonanywhere.com/flightbook/
-
-BEST TO BE VIEWED ON LOCAL SERVER using: 
-
-python manage.py runserver
 
 Screenshots:
 
